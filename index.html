@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<style>
+   
+    .wrapper{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 100%;
+        text-align: center;
+        background-image: linear-gradient(90deg,#fff7ad,#ffa9f9);
+    }
+
+.M,.i,.x,.and,.m,.a,.t,.c,.h{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 50px;
+    
+}
+
+a{
+    text-decoration: none;
+    transition: 0.5s;
+}
+.M{
+opacity: 1;
+animation: drop 2s linear forwards 0.5s;
+color: #092635;
+
+}
+.i{
+opacity: 1;
+animation: drop 2.2s linear forwards 0.8s;
+color: #1B4242;
+
+}
+.x {
+opacity: 0;
+animation: drop 2.5s linear forwards 1s;
+color: #5C8374;
+
+}
+.and {
+opacity: 0;
+animation: drop 2.4s linear forwards 1.5s;
+color: #3F4E4F;
+
+}
+.m {
+opacity: 0;
+animation: drop 3s linear forwards 0.8s;
+color: #27374D;
+
+}
+.a {
+opacity: 0;
+animation: drop 2.5s linear forwards 0.2s;
+color: #526D82;
+
+}
+.t {
+opacity: 0;
+animation: drop 2s linear forwards 0.2s;
+color: #9DB2BF;
+
+}
+.c {
+opacity: 0;
+animation: drop 1.5s linear forwards 0.2s;
+color: #50577A;
+
+}
+.h {
+opacity: 0;
+animation: drop .7s linear forwards 0.4s;
+color: #50577A;
+
+}
+@keyframes drop {
+    0% {
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+    10% {
+        transform: translateY(-180px);
+        opacity: 0;
+    }
+    20% {
+        transform: translateY(-160px);
+        opacity: 0;
+    }
+    30% {
+        transform: translateY(-140px);
+        opacity: 0;
+    }
+    40% {
+        transform: translateY(-120px);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(-100px);
+        opacity: 1;
+    }
+    60% {
+        transform: translateY(-80px);
+        opacity: 1;
+    }
+    70% {
+        transform: translateY(-40px);
+        opacity: 1;
+    }
+    80% {
+        transform: translateY(-30px);
+        opacity: 1;
+    }
+    90% {
+        transform: translateY(-20px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+.wrapper{
+    transition: opacity 0.5s ease-in-out;
+   
+
+}
+
+  body{
+        background-image: linear-gradient(90deg,#fff7ad,#ffa9f9);
+    
+  }
+
+</style>
+<body>
+
+    <div class="wrapper">
+        <h1 class="mix&match">
+            <a href="JSQUERY-B.html">
+                <span class="M">M</span>
+                <span class="i">i</span>
+                <span class="x">x</span>
+                <span class="and">&</span>
+                <span class="m">M</span>
+                <span class="a">a</span>
+                <span class="t">t</span>
+                <span class="c">c</span>
+                <span class="h">h</span>
+            </a>
+            
+      </h1>
+     </div>
+    <script>
+        $(document).ready(function(){
+
+           
+
+            $(".wrapper").fadeOut(3000);
+            setTimeout(function(){
+                window.location.href = "JSQUERY-B.html";
+            },4000);
+           
+           })
+     
+    </script>
+    
+</body>
+</html>

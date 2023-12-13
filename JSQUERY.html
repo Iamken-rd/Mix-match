@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <title>Mix&Match</title>
+   
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        
+    }body{
+        background-image: linear-gradient(90deg,#fff7ad,#ffa9f9);
+    }
+    a,li,ul{
+        list-style: none;
+        text-decoration: none;
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        padding: 10px;
+    }
+    .nav{
+        width: 30%;
+        height: 30%;
+        margin-right: 10px;
+
+        
+
+    }
+   
+    .wrapper{
+        width: 40%;
+        height: 100%;
+        padding: 30px;
+    }
+
+.product1 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  margin: 30px;
+    background-color: white;
+ border-radius: 10%;
+  
+}
+
+
+.price {
+  color: rgb(235, 24, 52);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.product1 button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: rgb(8, 6, 6);
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5%;
+  background-image: linear-gradient(90deg,#ffa9f9,#fff7ad);
+}
+
+.product1 button:hover {
+    font-size: large;
+  opacity: 0.7;
+}
+
+.product1 img {
+  width: 40%;
+  height: 200%;
+}
+
+
+  .container,.container2,.container3{
+        margin-top: 2%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+        width: 100%;
+      
+  }
+.products{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.M,.i,.x,.and,.m,.a,.t,.c,.h{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 50px;
+}
+.Holder1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.M{
+opacity: 1;
+animation: drop 2s linear forwards 0.5s;
+color: #092635;
+
+}
+.i{
+opacity: 1;
+animation: drop 2.2s linear forwards 0.8s;
+color: #1B4242;
+
+}
+.x {
+opacity: 0;
+animation: drop 2.5s linear forwards 1s;
+color: #5C8374;
+
+}
+.and {
+opacity: 0;
+animation: drop 2.4s linear forwards 1.5s;
+color: #3F4E4F;
+
+}
+.m {
+opacity: 0;
+animation: drop 3s linear forwards 0.8s;
+color: #27374D;
+
+}
+.a {
+opacity: 0;
+animation: drop 2.5s linear forwards 0.2s;
+color: #526D82;
+
+}
+.t {
+opacity: 0;
+animation: drop 2s linear forwards 0.2s;
+color: #9DB2BF;
+
+}
+.c {
+opacity: 0;
+animation: drop 1.5s linear forwards 0.2s;
+color: #50577A;
+
+}
+.h {
+opacity: 0;
+animation: drop .7s linear forwards 0.4s;
+color: #50577A;
+
+}
+@keyframes drop {
+    0% {
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+    10% {
+        transform: translateY(-180px);
+        opacity: 0;
+    }
+    20% {
+        transform: translateY(-160px);
+        opacity: 0;
+    }
+    30% {
+        transform: translateY(-140px);
+        opacity: 0;
+    }
+    40% {
+        transform: translateY(-120px);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(-100px);
+        opacity: 1;
+    }
+    60% {
+        transform: translateY(-80px);
+        opacity: 1;
+    }
+    70% {
+        transform: translateY(-40px);
+        opacity: 1;
+    }
+    80% {
+        transform: translateY(-30px);
+        opacity: 1;
+    }
+    90% {
+        transform: translateY(-20px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+.CheckoutSection{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90vh;
+    background-image: linear-gradient(90deg,#fff7ad,#ffa9f9);
+}
+.CheckoutSection p{
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #092635;
+    margin-top: 1%;
+    
+}
+.CheckoutSection h1{
+    margin-top: 2%;
+    
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    color: #092635;
+    margin-top: 2%;
+    font-size: 50px;
+    
+}
+.Page1{
+    cursor: pointer;
+}
+
+
+.CheckoutSection1{
+
+    width: 100%;
+    height: 30vh;
+
+}
+.CheckoutSection1 h1{
+    margin-top: 2%;
+    font-size: 100px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    color: #092635;
+    margin-top: 2%;
+    text-align: center;
+   font-size: 50px;
+   cursor: pointer;
+    
+}
+
+.receiptype{
+  border-right: solid 3px rgba(8, 12, 8, 0.75);
+  white-space: nowrap;
+  overflow: hidden;    
+  font-size: 30px;
+  color: black;
+  margin-top: 5%;
+  width: 100%;
+ 
+}
+
+.Rec{
+
+    font-size: 40px;
+    color: black;
+}
+
+.receiptype{
+    width: 100%;
+  animation: animated-text 4s steps(29,end) 1s .4 normal both,
+             animated-cursor 600ms steps(20,end) infinite;
+}
+
+
+
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 472px;}
+}
+
+
+
+@keyframes animated-cursor{
+  from{border-right-color: rgba(5, 7, 5, 0.75);}
+  to{border-right-color: transparent;}
+}
+
+
+  
+</style>
+<body>
+    <script>
+        
+
+      $(document).ready(function(){
+        
+        $("#test").fadeIn(2000);
+        $("#total").hide();
+        $("#Products").hide();
+        $("#more").on("click",function(){
+            $("#Products").show(2000);
+        });
+        $("#moreover").on("click",function(){
+            $("#total").show(1000);
+        });
+
+      });
+    </script>
+
+<div id="test">
+    <section id="Home">
+        <div class="Holder1">
+            <div class="wrapper">
+               <h1 class="mix&match">
+                    <span class="M">M</span>
+                    <span class="i">i</span>
+                    <span class="x">x</span>
+                    <span class="and">&</span>
+                    <span class="m">M</span>
+                    <span class="a">a</span>
+                    <span class="t">t</span>
+                    <span class="c">c</span>
+                    <span class="h">h</span>
+             </h1>
+            </div>
+         <div class="wrapper1">
+            <nav>
+                <ul>
+                    <li><a href="#Home.html"><img class="nav" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAy0lEQVR4nO3UMQrCMBiG4RcHJ8HFwdkbeAAnFz2AV/AKHsBb9BBuzoJFocdQJwe3TgpGAglIKCEpf0QlL3xQiu0DVQu5sEbA0Uwff6QJcAWU2Q2YpkaXwP0NtXsAqxRgFygaQHeF+azuYM6VbdEBsAtA7TQ4dM5FNwZOEaide01UC6BugTYtqA6wBp5CqDL39NYDNoKg3Rbo++AqAWpX+eAyIbwP+Z6l0eB+CnbLcFD5Uav84+KL/k5K4gVyEUTPMfBcCNfoLAbO/U8vHseDhRwPBsEAAAAASUVORK5CYII=">Home</a></li>
+                    <li><a id="more" href="#Products"><img class="nav" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAACPUlEQVR4nO2aPWgUQRiGn0A0kBQWIkgOIWXAdJb+tebPVBIuSLQTsdBKUiqiWKRREtIIgrnWKmlSxDtC7ISQIilsvEatoiYRtFBWBkYIy3E3sztz+WZ3Hnjqb9732N3b7w4ikUgkEvkEJCn/AB+BBeBs0St63aKAo34DRigwtzsUoGwCJygoQwYFKKcpESeBV6kCapSMiy0ug1LRB/xKlXCOkrGRKqBKyXiaKuA7sAu8B1aBZeAl8Bh4ANwCrgOX9aOzAvQTMGOGTwgT1eX0BdgBNoEV4A3wAngE3AdmgUngEnAeGAR6jrOAU/pboasSgixvW0ABWf0NfAWu5ClgUUCQvOZ6elUFBMjjj7yXQkVAiDyqe0ZumgKCZHXJRQE1AUGyes9FAXcFBMnqVRcFjAgIktXTLgroAfYEhLH1Mw5ZERDI1jWXBcwJCGTrvM8FSRKAat/pdUGSCPcCnhckiWD/AgOuC3gmIJip6ocd0QuSxLNvi7wgSQxUazovbAsIZ+INXwUsCghn4rCvAqoCwpmswnp9FVARELCTW3imKSBkO9XG2Cs1ASHb+dB3AXcEhGznNd8FnBH8XrCn31u8MycgbCtv0kVmgA/6sXOcoX/q9fdoN8NHIpHIf6aAhr4ZKev6t/pQ51jxvM3dWf3FJrQ51p9Ip0fUREBzrGkYHOxdQHOsOTQ42EFAc7wcbD+gOdbUDQ62HtAcayYNDjYe0Bwn/yY96pMA52RiQt+FD7Xrnj6Rbs2JRCKRCEXnH2xKsDU8Ew7VAAAAAElFTkSuQmCC">Products</a></li>
+                    <li><a id="moreover" href="#total"><img class="nav" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACaklEQVR4nO2Zv2sUQRSAPw0iVtHgryOnlQQtEoOKiKlECzVICIgogoF0tmrrP6BBEFEJWGkRRAKGYATtrEIQETFISBcF8UxiUlmY8+TBWxjC/di5vNm9AT94ze682fftzcztzsJ/NswMMI0h/cA3oFInVoB3wBCwyei6Sd9mfG0gsT6eGskEFVmo0WYPcA1Y1nbDrShyTmVE4myDtoN68c+tKOKDDKk5LeAoEYsId7SAW0Qu0q8FTMYu0g6s6ZLcFrOI8F6LOELkIiNaxI3YRS5oEROxi7TrPJE/yM0xiwgftJBeIhe55/mMtj4SNtLHKwuRgRYQmbMQ6QDKOYvcxoiPOYqUgf1WIvdzFHmDIcljfaM4DfQBS3VE5NxJ4EzKPq9YiuwE/qa4qEigS/ViFZFFZxnvS9HfL2AbxnxKeeFj2v4wUHLyl513m15HtF48IgAPUg4F9653O/ndnhIV4HgIkYseE9S9+y7yK/1M2YfFa3ZVdqWcJ7VkejwkKsBNAjLruXSWdEgdAr575P0B9oYUeegpksiUPHNeEphLTYg0EwOhRXZ7zpNm4gewhQz4ElhkhIx4HFikJyuRywElZsiQQkCR62RMsi9sGb+BHVmLjBpLlIG75MBVLeAJkVMI/WCXJfM6JLYTOaP6q8hjS9ScV5G3RE6bswzL162DwFYi5QSwargMT+cpc8pQZA0o5iXyzPnWWNBCpvTYWI2cMWdzupgyJzjJK2ync2yfsxlXjSU9X6ySI0M1F1brFLVimBOccS1gSouReK3HXhjmBKerxoabDJ8DhjlkgcyP5zpkJOSuNiqomRz+AUVayH5AaLVrAAAAAElFTkSuQmCC">Checkout</a></li>
+                </ul>
+            </nav>
+         </div>
+         
+         <div class="container">
+            <div class="product1">
+                <img class="jabi" src="https://i.pinimg.com/564x/8c/ba/3f/8cba3fa4c90ae4fbd2f84ef61dc5d5f5.jpg">
+                <h1>JOLLY CHICKEN</h1>
+                <p class="price">₱ 160</p>
+                <p>ONE OF THE FAVOURITES</p>
+                <p><button id="JollibeeProduct1">ADD TO CART</button></p>
+            </div>
+            <div  class="product1">
+                <img class="jabi" src="https://i.pinimg.com/564x/0c/ca/4d/0cca4d92f07ed56d6fbd86df59a3b978.jpg">
+                <h1>JOLLY BURGER STEAK</h1>
+                <p class="price">₱ 150</p>
+                <p>ONE OF THE FAVOURITES</p>
+                <p><button id="JollibeeProduct2">ADD TO CART</button></p>
+            </div>
+            <div  class="product1">
+                <img class="jabi" src="https://i.pinimg.com/564x/e9/86/f1/e986f1e803bee89f7ee49ef25adaf34c.jpg">
+                <h1>CHICKEN SANDWICH</h1>
+                <p class="price">₱ 130</p>
+                <p>ONE OF THE FAVOURITES</p>
+                <p><button id="JollibeeProduct3">ADD TO CART</button></p>
+            </div>
+            <div class="product1">
+                <img class="jabi" src="https://i.pinimg.com/564x/e9/96/ea/e996eaba481fdb7c6e70990825e72a25.jpg" >
+                <h1>SPAGHETTI</h1>
+                <p class="price">₱ 90</p>
+                <p>ONE OF THE FAVOURITES</p>
+                <p><button  id="JollibeeProduct4">ADD TO CART</button></p>
+            </div>
+            <div  class="product1">
+                <img class="jabi" src="https://i.pinimg.com/564x/64/6c/f7/646cf7ff224ba0df25a54789d40b1b27.jpg">
+                <h1>BREAKFAST MEAL</h1>
+                <p class="price">₱ 100</p>
+                <p>ONE OF THE FAVOURITES</p>
+                <p><button id="JollibeeProduct5">ADD TO CART</button></p>
+            </div>
+                
+        </div>
+        <div class="container2">
+            <div class="product1">
+                <img class="jabi" src="https://i.pinimg.com/564x/cf/b8/c5/cfb8c5ff6f4ff600f7c283402f1a22f3.jpg">
+                <h1>MCDO NUGGETS</h1>
+                <p class="price">₱ 120</p>
+                <p>ONE OF THE FAVOURITES</p>
+                <p><button id="MCproduct1">ADD TO CART</button></p>
+            </div>
+            <div  class="product1">
+                <img class="jabi" src="https://i.pinimg.com/564x/bb/2a/b8/bb2ab8be6996ef0e1c560119edd8a997.jpg">
+                <h1>KFC BUNDLE</h1>
+                <p class="price">₱ 450</p>
+                <p>ONE OF THE FAVOURITES</p>
+                <p><button id="kfcproduct1">ADD TO CART</button></p>
+            </div>
+            <div  class="product1">
+                <img class="jabi" src="https://i.pinimg.com/564x/d8/44/48/d844482555e088201d39f739fe38b2ca.jpg">
+                <h1>BURGER KING</h1>
+                <p class="price">₱ 160</p>
+                <p>ONE OF THE FAVOURITES</p>
+                <p><button id="BKproduct1">ADD TO CART</button></p>
+            </div>
+            <div class="product1">
+                <img class="jabi" src="https://i.pinimg.com/originals/4e/23/81/4e2381ee499ee7b09f27d33d2c8c8620.gif" >
+                <h1>PIZZAHUT</h1>
+                <p class="price">₱ 250</p>
+                <p>ONE OF THE FAVOURITES</p>
+                <p><button  id="PZHproduct1">ADD TO CART</button></p>
+            </div>
+
+            <div  class="product1">
+                <img class="jabi" src="https://i.pinimg.com/564x/da/c7/c7/dac7c78e490eb75d547024ad9398f0ca.jpg">
+                <h1>DOMINO PIZZA</h1>
+                <p class="price">₱ 450</p>
+                <p>ONE OF THE FAVOURITES</p>
+                <p><button id="DMproduct1">ADD TO CART</button></p>
+            </div>
+    </section>
+    <section id="Products">
+        <div class="container2">
+            <div class="product1">
+                <img class="jabi" src="https://i.pinimg.com/564x/64/0f/b5/640fb5221aa9278f2c7a62caa3ffa8da.jpg">
+                <h1>GREENICH LASAGNA</h1>
+                <p class="price">₱ 120</p>
+                <p>ONE OF THE FAVOURITES</p>
+                <p><button id="GWproduct1">ADD TO CART</button></p>
+            </div>
+            <div  class="product1">
+                <img class="jabi" src="https://i.pinimg.com/564x/cd/21/68/cd21682cf3b9b3fe8bed1dcc52f15cf9.jpg">
+                <h1>KOREAN CHICKEN</h1>
+                <p class="price">₱ 250</p>
+                <p>ONE OF THE FAVOURITES</p>
+                <p><button id="KCproduct1">ADD TO CART</button></p>
+            </div>
+            <div  class="product1">
+                <img class="jabi" src="https://i.pinimg.com/564x/db/d6/19/dbd619be8f6537955a47518504d8e9d9.jpg">
+                <h1>KIMCHIE</h1>
+                <p class="price">₱ 80</p>
+                <p>ONE OF THE FAVOURITES</p>
+                <p><button id="KCproduct2">ADD TO CART</button></p>
+            </div>
+            <div class="product1">
+                <img class="jabi" src="https://i.pinimg.com/564x/dc/0a/a0/dc0aa036129faf03ae73e821c0f2ff5d.jpg" >
+                <h1>SUBWAY</h1>
+                <p class="price">₱ 230</p>
+                <p>ONE OF THE FAVOURITES</p>
+                <p><button  id="KCproduct3">ADD TO CART</button></p>
+            </div>
+
+            <div  class="product1">
+                <img class="jabi" src="https://i.pinimg.com/564x/52/0a/8e/520a8ece7fd6e0720f67ba333ec413c7.jpg">
+                <h1>RAMEN</h1>
+                <p class="price">₱ 250</p>
+                <p>ONE OF THE FAVOURITES</p>
+                <p><button id="JPKCproduct1">ADD TO CART</button></p>
+            </div>
+            <div class="container3">
+                <div class="product1">
+                    <img class="jabi" src="https://i.pinimg.com/564x/0a/5c/51/0a5c5187e2a315de1a8bb9b6237eb069.jpg">
+                    <h1>LECHON</h1>
+                    <p class="price">₱ 300/KG</p>
+                    <p>ONE OF THE FAVOURITES</p>
+                    <p><button id="Lechon">ADD TO CART</button></p>
+                </div>
+                <div  class="product1">
+                    <img class="jabi" src="https://i.pinimg.com/564x/d1/1d/e3/d11de3752d4ba5d33bd1ca75596b974e.jpg">
+                    <h1>ROASTED CHICKEN</h1>
+                    <p class="price">₱ 300</p>
+                    <p>ONE OF THE FAVOURITES</p>
+                    <p><button id="MANOK">ADD TO CART</button></p>
+                </div>
+                <div  class="product1">
+                    <img class="jabi" src="https://i.pinimg.com/564x/cc/6d/24/cc6d2477893b4c8573b7041915462fe2.jpg">
+                    <h1>SIZZLING SQUID</h1>
+                    <p class="price">₱ 280</p>
+                    <p>ONE OF THE FAVOURITES</p>
+                    <p><button id="SQKCproduct2">ADD TO CART</button></p>
+                </div>
+                <div class="product1">
+                    <img class="jabi" src="https://i.pinimg.com/564x/4b/a9/72/4ba972318f0afd979d3f69d38342c18f.jpg" >
+                    <h1>CALAMARES</h1>
+                    <p class="price">₱ 160</p>
+                    <p id="cala">ONE OF THE FAVOURITES</p>
+                    <p><button  id="CALAMARES">ADD TO CART</button></p>
+                </div>
+    
+                <div  class="product1">
+                    <img class="jabi" src="https://i.pinimg.com/564x/7e/da/17/7eda17cba89e3351769b3c07a892b007.jpg">
+                    <h1>RANDOM DRINK</h1>
+                    <p class="price">₱ 140</p>
+                    <p>ONE OF THE FAVOURITES</p>
+                    <p><button id="DRINKS">ADD TO CART</button></p>
+                </div>
+    </section>
+
+    <section id="total">
+        <div class="foot">
+            <h1 class="receiptype" >RECEIPT</h1>
+        </div>
+       
+        <div id="Receipt" class="CheckoutSection">
+            
+            
+            <h2 class="Rec" id="Items"></h2>
+            
+        </div>
+        <div class="CheckoutSection1">
+            <h1 id="CheckoutPage">CHECKOUT</h1>
+        </div>
+        
+ </div>
+    <script>
+
+
+        var ctr1=0,ctr2=0,ctr3=0,ctr3=0,ctr4=0,ctr5=0,ctr6=0,ctr7=0,ctr8=0,ctr9=0,ctr10=0,ctr11=0,ctr12=0,ctr13=0,ctr14=0,ctr15=0,ctr16=0,ctr17=0,ctr18=0,ctr19=0,ctr20=0;
+        var items=0;
+        var total=0;
+        var x = document.getElementById("Receipt");
+        $(document).ready(function(){
+
+            $("#JollibeeProduct1").click(function(){
+                var price1=160;
+                ctr1++;
+        
+               
+                x.innerHTML += "<p> JOLLY CHICKEN: ₱160</p>";
+        
+                items = ctr1+ctr2+ctr3+ctr4+ctr5+ctr6+ctr7+ctr8+ctr9+ctr10+ctr11+ctr12+ctr13+ctr14+ctr15+ctr16+ctr17+ctr18+ctr19+ctr20;
+                $("#Items").text("ITEMS: "+items);
+                alert("Added to Cart"); 
+                         
+            });
+            $("#JollibeeProduct2").click(function(){
+                ctr2++;
+
+                
+                x.innerHTML += "<p> JOLLY BURGER STEAK: ₱150</p>";
+
+                items = ctr1+ctr2+ctr3+ctr4+ctr5+ctr6+ctr7+ctr8+ctr9+ctr10+ctr11+ctr12+ctr13+ctr14+ctr15+ctr16+ctr17+ctr18+ctr19+ctr20;
+                  $("#Items").text("ITEMS: "+items);
+                alert("Added to Cart");
+                
+            });
+            $("#JollibeeProduct3").click(function(){
+                ctr3++;
+
+                x.innerHTML += "<p> CHICKEN SANDWICH: ₱130</p>";
+
+                items = ctr1+ctr2+ctr3+ctr4+ctr5+ctr6+ctr7+ctr8+ctr9+ctr10+ctr11+ctr12+ctr13+ctr14+ctr15+ctr16+ctr17+ctr18+ctr19+ctr20;
+                  $("#Items").text("ITEMS: "+items);
+                alert("Added to Cart");
+                
+            });
+            $("#JollibeeProduct4").click(function(){
+                ctr4++;
+
+                x.innerHTML += "<p> SPAGHETTI: ₱90</p>";
+
+                items = ctr1+ctr2+ctr3+ctr4+ctr5+ctr6+ctr7+ctr8+ctr9+ctr10+ctr11+ctr12+ctr13+ctr14+ctr15+ctr16+ctr17+ctr18+ctr19+ctr20;
+                  $("#Items").text("ITEMS: "+items);
+                alert("Added to Cart");
+              
+            });
+            $("#JollibeeProduct5").click(function(){
+                ctr5++;
+
+                x.innerHTML += "<p> BREAKFAST MEAL: ₱100</p>";
+
+                items = ctr1+ctr2+ctr3+ctr4+ctr5+ctr6+ctr7+ctr8+ctr9+ctr10+ctr11+ctr12+ctr13+ctr14+ctr15+ctr16+ctr17+ctr18+ctr19+ctr20;
+                  $("#Items").text("ITEMS: "+items);
+                alert("Added to Cart");
+                
+            });
+            $("#MCproduct1").click(function(){
+                ctr6++;
+
+                x.innerHTML += "<p> MCDO NUGGETS: ₱120</p>";
+
+                items = ctr1+ctr2+ctr3+ctr4+ctr5+ctr6+ctr7+ctr8+ctr9+ctr10+ctr11+ctr12+ctr13+ctr14+ctr15+ctr16+ctr17+ctr18+ctr19+ctr20;
+                  $("#Items").text("ITEMS: "+items);
+                alert("Added to Cart");
+              
+            });
+            $("#kfcproduct1").click(function(){
+                ctr7++;
+
+                x.innerHTML += "<p> KFC BUNDLE: ₱450</p>";
+
+                items = ctr1+ctr2+ctr3+ctr4+ctr5+ctr6+ctr7+ctr8+ctr9+ctr10+ctr11+ctr12+ctr13+ctr14+ctr15+ctr16+ctr17+ctr18+ctr19+ctr20;
+                  $("#Items").text("ITEMS: "+items);
+                alert("Added to Cart");
+                
+            });
+            $("#BKproduct1").click(function(){
+                ctr8++;
+
+                x.innerHTML += "<p> BURGER KING: ₱160</p>";
+
+                items = ctr1+ctr2+ctr3+ctr4+ctr5+ctr6+ctr7+ctr8+ctr9+ctr10+ctr11+ctr12+ctr13+ctr14+ctr15+ctr16+ctr17+ctr18+ctr19+ctr20;
+                  $("#Items").text("ITEMS: "+items);
+                alert("Added to Cart");
+               
+            });
+            $("#PZHproduct1").click(function(){
+                ctr9++;
+                
+                x.innerHTML += "<p> PIZZAHUT: ₱250</p>";
+
+                items = ctr1+ctr2+ctr3+ctr4+ctr5+ctr6+ctr7+ctr8+ctr9+ctr10+ctr11+ctr12+ctr13+ctr14+ctr15+ctr16+ctr17+ctr18+ctr19+ctr20;
+                  $("#Items").text("ITEMS: "+items);
+                alert("Added to Cart");
+               
+            });
+            $("#DMproduct1").click(function(){
+                ctr10++;
+ 
+                x.innerHTML += "<p> DOMINO PIZZA: ₱450</p>";
+
+                items = ctr1+ctr2+ctr3+ctr4+ctr5+ctr6+ctr7+ctr8+ctr9+ctr10+ctr11+ctr12+ctr13+ctr14+ctr15+ctr16+ctr17+ctr18+ctr19+ctr20;
+                  $("#Items").text("ITEMS: "+items);
+                alert("Added to Cart");
+               
+            });
+            $("#GWproduct1").click(function(){
+                ctr11++;
+ 
+                x.innerHTML += "<p> GREENICH LASAGNA: ₱120</p>";
+
+                items = ctr1+ctr2+ctr3+ctr4+ctr5+ctr6+ctr7+ctr8+ctr9+ctr10+ctr11+ctr12+ctr13+ctr14+ctr15+ctr16+ctr17+ctr18+ctr19+ctr20;
+                  $("#Items").text("ITEMS: "+items);
+                alert("Added to Cart");
+                
+            });
+            $("#KCproduct1").click(function(){
+                ctr12++;
+ 
+                x.innerHTML += "<p> KOREAN CHICKEN: ₱250</p>";
+ 
+               
+                items = ctr1+ctr2+ctr3+ctr4+ctr5+ctr6+ctr7+ctr8+ctr9+ctr10+ctr11+ctr12+ctr13+ctr14+ctr15+ctr16+ctr17+ctr18+ctr19+ctr20;
+                  $("#Items").text("ITEMS: "+items);
+                alert("Added to Cart");
+               
+            });
+            $("#KCproduct2").click(function(){
+                ctr13++;
+ 
+                x.innerHTML += "<p> KIMCHIE: ₱80</p>";
+
+                items = ctr1+ctr2+ctr3+ctr4+ctr5+ctr6+ctr7+ctr8+ctr9+ctr10+ctr11+ctr12+ctr13+ctr14+ctr15+ctr16+ctr17+ctr18+ctr19+ctr20;
+                  $("#Items").text("ITEMS: "+items);
+                alert("Added to Cart");
+               
+            });
+            $("#KCproduct3").click(function(){
+                ctr14++;
+
+                x.innerHTML += "<p> SUBWAY: ₱230</p>";
+
+                items = ctr1+ctr2+ctr3+ctr4+ctr5+ctr6+ctr7+ctr8+ctr9+ctr10+ctr11+ctr12+ctr13+ctr14+ctr15+ctr16+ctr17+ctr18+ctr19+ctr20;
+                  $("#Items").text("ITEMS: "+items);
+                alert("Added to Cart");
+               
+            });
+            $("#JPKCproduct1").click(function(){
+                ctr15++;
+                
+                x.innerHTML += "<p> RAMEN: ₱250</p>";
+
+                items = ctr1+ctr2+ctr3+ctr4+ctr5+ctr6+ctr7+ctr8+ctr9+ctr10+ctr11+ctr12+ctr13+ctr14+ctr15+ctr16+ctr17+ctr18+ctr19+ctr20;
+                  $("#Items").text("ITEMS: "+items);
+                alert("Added to Cart");
+               
+            });
+            $("#Lechon").click(function(){
+                ctr16++;
+ 
+                x.innerHTML += "<p> LECHON: ₱300/KG</p>";
+
+                items = ctr1+ctr2+ctr3+ctr4+ctr5+ctr6+ctr7+ctr8+ctr9+ctr10+ctr11+ctr12+ctr13+ctr14+ctr15+ctr16+ctr17+ctr18+ctr19+ctr20;
+                  $("#Items").text("ITEMS: "+items);
+                alert("Added to Cart");
+               
+            });
+
+            $("#MANOK").click(function(){
+                ctr17++;
+
+                x.innerHTML += "<p> ROASTED CHICKEN: ₱300</p>";
+
+                items = ctr1+ctr2+ctr3+ctr4+ctr5+ctr6+ctr7+ctr8+ctr9+ctr10+ctr11+ctr12+ctr13+ctr14+ctr15+ctr16+ctr17+ctr18+ctr19+ctr20;
+                  $("#Items").text("ITEMS: "+items);
+                alert("Added to Cart");
+              
+            });
+            $("#SQKCproduct2").click(function(){
+                ctr18++;
+
+                x.innerHTML += "<p> SIZZLING SQUID: ₱280</p>";
+
+                items = ctr1+ctr2+ctr3+ctr4+ctr5+ctr6+ctr7+ctr8+ctr9+ctr10+ctr11+ctr12+ctr13+ctr14+ctr15+ctr16+ctr17+ctr18+ctr19+ctr20;
+                  $("#Items").text("ITEMS: "+items);
+                alert("Added to Cart");
+               
+            });
+            $("#CALAMARES").click(function(){
+                ctr19++;
+
+                x.innerHTML += "<p> CALAMARES: ₱160</p>";
+
+
+                items = ctr1+ctr2+ctr3+ctr4+ctr5+ctr6+ctr7+ctr8+ctr9+ctr10+ctr11+ctr12+ctr13+ctr14+ctr15+ctr16+ctr17+ctr18+ctr19+ctr20;
+                  $("#Items").text("ITEMS: "+items);
+                alert("Added to Cart");
+               
+            });
+            $("#DRINKS").click(function(){
+                ctr20++;
+
+
+                x.innerHTML += "<p> RANDOM DRINK: ₱140</p>";
+
+                items = ctr1+ctr2+ctr3+ctr4+ctr5+ctr6+ctr7+ctr8+ctr9+ctr10+ctr11+ctr12+ctr13+ctr14+ctr15+ctr16+ctr17+ctr18+ctr19+ctr20;
+                  $("#Items").text("ITEMS: "+items);
+                alert("Added to Cart");
+                
+            });
+
+            $("#CheckoutPage").click(function(){
+               
+                total = (ctr1*160)+(ctr2*150)+(ctr3*130)+(ctr4*90)+(ctr5*100)+(ctr6*120)+(ctr7*450)+(ctr8*160)+(ctr9*250)+(ctr10*450)+(ctr11*120)+(ctr12*250)+(ctr13*80)+(ctr14*230)+(ctr15*250)+(ctr16*300)+(ctr17*300)+(ctr18*280)+(ctr19*160)+(ctr20*140); 
+                if(total==0){
+                    alert("Please add items to cart");
+                    
+                }
+                else{
+                    alert("Total: ₱"+total);
+                    alert("Thank you for ordering");
+                }
+               
+            });
+
+        });
+
+
+        
+    </script>
+</div>
+</body>
+</html>
